@@ -1,0 +1,98 @@
+{
+  "model_version": "1.0.0",
+  "trained_at": "2026-11-13T10:37:28+00:00",
+  "n_rows": {
+    "train": 17979,
+    "validation": 5993,
+    "test": 5993
+  },
+  "default_rate": 0.2213,
+  "test": {
+    "logistic_regression": {
+      "auc": 0.7576,
+      "gini": 0.5152,
+      "ks": 0.4127,
+      "brier": 0.1398,
+      "log_loss": 0.4436
+    },
+    "xgboost": {
+      "auc": 0.7931,
+      "gini": 0.5862,
+      "ks": 0.4385,
+      "brier": 0.1326,
+      "log_loss": 0.4218
+    }
+  },
+  "decision": {
+    "threshold": 0.135,
+    "flag_rate": 0.5555,
+    "precision": 0.3382,
+    "recall": 0.8492,
+    "expected_cost_per_client": 0.5345
+  },
+  "xgboost_best_iteration": 188,
+  "fairness": {
+    "sex": {
+      "approval_ratio": 0.8899,
+      "groups": [
+        {
+          "group": "female",
+          "n": 3607,
+          "default_rate": 0.2032,
+          "approval_rate": 0.4649,
+          "true_positive_rate": 0.8581,
+          "false_positive_rate": 0.4527
+        },
+        {
+          "group": "male",
+          "n": 2386,
+          "default_rate": 0.2485,
+          "approval_rate": 0.4137,
+          "true_positive_rate": 0.8381,
+          "false_positive_rate": 0.5031
+        }
+      ]
+    },
+    "age_band": {
+      "approval_ratio": 0.8049,
+      "groups": [
+        {
+          "group": "30-45",
+          "n": 2863,
+          "default_rate": 0.2106,
+          "approval_rate": 0.4834,
+          "true_positive_rate": 0.8076,
+          "false_positive_rate": 0.4389
+        },
+        {
+          "group": "45+",
+          "n": 938,
+          "default_rate": 0.2676,
+          "approval_rate": 0.3891,
+          "true_positive_rate": 0.8884,
+          "false_positive_rate": 0.5095
+        },
+        {
+          "group": "<30",
+          "n": 2192,
+          "default_rate": 0.2153,
+          "approval_rate": 0.4174,
+          "true_positive_rate": 0.8814,
+          "false_positive_rate": 0.5006
+        }
+      ]
+    }
+  },
+  "top_features": {
+    "PAY_1": 0.3553999960422516,
+    "max_delay": 0.2678999900817871,
+    "months_delayed": 0.19300000369548798,
+    "BILL_AMT1": 0.13099999725818634,
+    "PAY_AMT2": 0.09769999980926514,
+    "PAY_AMT1": 0.09430000185966492,
+    "LIMIT_BAL": 0.0877000018954277,
+    "utilization_avg": 0.08560000360012054,
+    "utilization_recent": 0.08110000193119049,
+    "PAY_AMT4": 0.055799998342990875
+  }
+}
